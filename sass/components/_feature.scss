@@ -1,0 +1,30 @@
+.feature {
+  display: flex;
+}
+
+.feature__list {
+  display: flex;
+  gap: 30px;
+}
+
+.feature__item {
+  width: 270px;
+}
+
+.feature__icon {
+  @include alignment;
+  margin-bottom: 30px;
+  justify-content: center;
+
+  height: 120px;
+  border-radius: 4px;
+  background: var(--section-background-teams-color);
+}
+
+.feature__label {
+  margin-bottom: 10px;
+}
+
+.feature__text {
+  @include font(null, 14px, 1.7);
+}

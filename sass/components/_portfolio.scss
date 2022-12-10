@@ -1,0 +1,100 @@
+/* ---------------- filter ---------------- */
+.filter__list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter__button {
+  color: var(--title-color);
+  background-color: var(--section-background-teams-color);
+  @include font(500, 16px, 1.62);
+  border-color: transparent;
+  transition: background 250ms var(--timing-function), color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    box-shadow: var(--box-shadow-portfolio-button);
+    border-radius: 4px;
+
+    color: var(--white-color);
+    background-color: var(--accent-color);
+  }
+}
+
+/* ---------------- portfolio ---------------- */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.portfolio__item {
+  width: calc((100% - 60px) / 3);
+}
+
+.portfolio__link {
+  display: block;
+  text-decoration: none;
+
+  transition: box-shadow 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    box-shadow: var(--box-shadow-portfolio-link);
+  }
+}
+
+.portfolio__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include alignment;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
+
+  background-color: var(--overlay-background-color);
+
+  .portfolio__link:hover & {
+    transform: translateY(0);
+  }
+}
+
+.portfolio__description {
+  padding: 63px 24px;
+  @include font(null, 18px, 1.55);
+  color: var(--white-color);
+}
+
+.portfolio__border {
+  padding: 20px 24px;
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+}
+
+.portfolio__label {
+  margin-bottom: 4px;
+
+  color: var(--title-color);
+  @include font(null, 18px, 2, 0.06em);
+}
+
+.portfolio__paragraph {
+  color: var(--primary-text-color);
+  @include font(null, 16px, 1.88);
+}

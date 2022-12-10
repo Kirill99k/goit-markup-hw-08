@@ -1,0 +1,33 @@
+:root {
+  --primary-text-color: #757575;
+  --secondary-text-color: #000000;
+  --title-color: #212121;
+  --white-color: #ffffff;
+  --accent-color: #2196f3;
+  --secondary-background-color: #2f303a;
+  --overlay-background-color: rgba(33, 150, 243, 0.9);
+  --modal-button-background-color: #188ce8;
+  --paragraph-footer-color: #ffffff99;
+  --section-background-teams-color: #f5f4fa;
+  --border-hero-color: #ececec;
+  --border-color: #eeeeee;
+  --icon-color: #afb1b8;
+  --mailing-input-color: rgba(255, 255, 255, 0.6);
+  --mailing-input-border: rgba(255, 255, 255, 0.3);
+  --hero-background-rgba: rgba(47, 48, 58, 0.4);
+  --product-background-rgba: rgba(47, 48, 58, 0.8);
+  --modal-background-rgba: rgba(0, 0, 0, 0.2);
+  --box-shadow-hero-button: rgba(0, 0, 0, 0.15);
+  --box-shadow-teams-item: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  --box-shadow-portfolio-button: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  --box-shadow-portfolio-link: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  --box-shadow-modal: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  --box-shadow-form-button: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --primary-font-family: 'Roboto';
+  --logo-font-family: 'Raleway';
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

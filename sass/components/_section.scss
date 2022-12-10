@@ -1,0 +1,19 @@
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section--reset-top {
+  padding-top: 0;
+}
+
+.section__title {
+  color: var(--title-color);
+  @include font(null, 36px, 1.17);
+  text-align: center;
+}
+
+.section__label {
+  color: var(--title-color);
+  @include font(null, 14px, 1.14);
+}
