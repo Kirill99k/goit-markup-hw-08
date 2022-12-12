@@ -24,8 +24,8 @@
     <!-- header -->
     <header class="header">
       <div class="header__container container">
+        <a href="/" class="logo">Web<span class="logo__text">Studio</span></a>
         <nav class="header__nav">
-          <a href="/" class="logo">Web<span class="logo__text">Studio</span></a>
           <ul class="site-nav header__site-nav list">
             <li class="site-nav__item">
               <a href="./index.html" class="link site-nav__link site-nav__link--current">Студія</a>
@@ -45,7 +45,7 @@
               info@devstudio.com</a
             >
           </li>
-          <li class="contacts-item">
+          <li class="list-contact__item">
             <a href="tel:+380961111111" class="list-contact__link link">
               <svg class="list-contact__icon" width="10" height="16">
                 <use href="./images/icons.svg#smartphone"></use>
@@ -54,12 +54,65 @@
             >
           </li>
         </ul>
+        <button type="button" class="menu-open" data-menu-open>
+          <svg width="40" height="40">
+            <use class="menu-open__icon-menu" href="./images/icons.svg#menu"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="mob-container">
+          <div class="mob-container__top">
+            <button type="button" class="menu-close" data-menu-close>
+              <svg width="40" height="40">
+                <use class="menu-button__icon-close" href="./images/icons.svg#close"></use>
+              </svg>
+            </button>
+            <ul class="mob-nav list">
+              <li class="mob-nav__item">
+                <a href="./index.html" class="link mob-nav__link mob-nav__link--current">Студія</a>
+              </li>
+              <li class="mob-nav__item">
+                <a href="./portfolio.html" class="link mob-nav__link">Портфоліо</a>
+              </li>
+              <li class="mob-nav__item"><a href="#" class="link mob-nav__link">Контакти</a></li>
+            </ul>
+          </div>
+
+          <div class="mob-container__bottom">
+            <ul class="mob-contact list">
+              <li class="mob-contact__item">
+                <a
+                  href="tel:+380961111111"
+                  class="mob-contact__link mob-contact__link--stylization link"
+                >
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="mob-contact__item">
+                <a href="mailto:info@devstudio.com" class="mob-contact__link link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <ul class="mob-links list">
+              <li class="mob-links__item">
+                <a class="mob-links__link link" href="#">Instagram</a>
+              </li>
+              <li class="mob-links__item"><a class="mob-links__link link" href="#">Twitter</a></li>
+              <li class="mob-links__item"><a class="mob-links__link link" href="#">Facebook</a></li>
+              <li class="mob-links__item"><a class="mob-links__link link" href="#">linkedin</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
     <main>
       <!-- hero -->
-      <section class="hero">
+      <!-- <section class="hero">
         <div class="hero__container container">
           <h1 class="hero__title">
             Ефективні рішення для<br />
@@ -69,10 +122,10 @@
             Замовити послугу
           </button>
         </div>
-      </section>
+      </section> -->
 
       <!-- feature -->
-      <section class="feature section">
+      <!-- <section class="feature section">
         <div class="feature__container container">
           <h2 class="visually-hidden">Особливості</h2>
           <ul class="feature__list list">
@@ -122,10 +175,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!-- examples -->
-      <section class="examples section section--reset-top">
+      <!-- <section class="examples section section--reset-top">
         <div class="examples__container container">
           <h2 class="examples__title section__title">Чим ми займаємося</h2>
           <ul class="examples__list list">
@@ -149,10 +202,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!-- team -->
-      <section class="team section">
+      <!-- <section class="team section">
         <div class="team__container container">
           <h2 class="team__title section__title">Наша команда</h2>
           <ul class="team__list list">
@@ -321,10 +374,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!-- client -->
-      <section class="client section">
+      <!-- <section class="client section">
         <div class="client__container container">
           <h2 class="client__title section__title">Постійні клієнти</h2>
           <ul class="client__list list">
@@ -371,11 +424,11 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <!-- footer -->
-    <footer class="footer footer">
+    <!-- <footer class="footer footer">
       <div class="footer__container container">
         <div class="requisites">
           <a href="/" class="logo">Web<span class="logo__text--inverse">Studio</span></a>
@@ -447,10 +500,10 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- modal -->
-    <div class="backdrop is-hidden" data-modal>
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button data-modal-close class="modal__close-button" type="button">
           <svg class="modal__close-icon" width="11" height="11">
@@ -502,8 +555,9 @@
           <button type="submit" class="modal__send-button button">Відправити</button>
         </form>
       </div>
-    </div>
+    </div> -->
 
     <script src="./js/modal.js"></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
