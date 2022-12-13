@@ -6,17 +6,28 @@
   margin-right: auto;
   margin-left: auto;
 
-  height: 600px;
-  max-width: 1600px;
-  background-image: linear-gradient(
-      to right,
-      var(--hero-background-rgba),
-      var(--hero-background-rgba)
-    ),
-    url(../../images/hero-mob.jpg);
+  background-image: var(--gradient), url(../../images/hero-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @include retina {
+    background-image: var(--gradient), url(../../images/hero-mob-2x.jpg);
+  }
+
+  @include mobile {
+    background-image: var(--gradient), url(../../images/hero-tablet.jpg);
+    @include retina {
+      background-image: var(--gradient), url(../../images/hero-tablet-2x.jpg);
+    }
+  }
+
+  @include tablet {
+    background-image: var(--gradient), url(../../images/hero.jpg);
+    @include retina {
+      background-image: var(--gradient), url(../../images/hero-2x.jpg);
+    }
+  }
 
   @include desktop {
     padding-top: 200px;

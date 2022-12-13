@@ -24,8 +24,8 @@
     <!-- header -->
     <header class="header">
       <div class="header__container container">
+        <a href="/" class="logo">Web<span class="logo__text">Studio</span></a>
         <nav class="header__nav">
-          <a href="/" class="logo">Web<span class="logo__text">Studio</span></a>
           <ul class="site-nav header__site-nav list">
             <li class="site-nav__item">
               <a href="./index.html" class="link site-nav__link">Студія</a>
@@ -47,7 +47,7 @@
               info@devstudio.com</a
             >
           </li>
-          <li class="contacts-item">
+          <li class="list-contact__item">
             <a href="tel:+380961111111" class="list-contact__link link">
               <svg class="list-contact__icon" width="10" height="16">
                 <use href="./images/icons.svg#smartphone"></use>
@@ -56,6 +56,60 @@
             >
           </li>
         </ul>
+
+        <button type="button" class="menu-open" data-menu-open>
+          <svg class="menu-open__icon-menu" width="40" height="40">
+            <use href="./images/icons.svg#menu"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="mob-container">
+          <div class="mob-container__top">
+            <button type="button" class="menu-close" data-menu-close>
+              <svg class="menu-button__icon-close" width="40" height="40">
+                <use href="./images/icons.svg#close"></use>
+              </svg>
+            </button>
+            <ul class="mob-nav list">
+              <li class="mob-nav__item">
+                <a href="./index.html" class="link mob-nav__link mob-nav__link--current">Студія</a>
+              </li>
+              <li class="mob-nav__item">
+                <a href="./portfolio.html" class="link mob-nav__link">Портфоліо</a>
+              </li>
+              <li class="mob-nav__item"><a href="#" class="link mob-nav__link">Контакти</a></li>
+            </ul>
+          </div>
+
+          <div class="mob-container__bottom">
+            <ul class="mob-contact list">
+              <li class="mob-contact__item">
+                <a
+                  href="tel:+380961111111"
+                  class="mob-contact__link mob-contact__link--stylization link"
+                >
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="mob-contact__item">
+                <a href="mailto:info@devstudio.com" class="mob-contact__link link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <ul class="mob-links list">
+              <li class="mob-links__item">
+                <a class="mob-links__link link" href="#">Instagram</a>
+              </li>
+              <li class="mob-links__item"><a class="mob-links__link link" href="#">Twitter</a></li>
+              <li class="mob-links__item"><a class="mob-links__link link" href="#">Facebook</a></li>
+              <li class="mob-links__item"><a class="mob-links__link link" href="#">linkedin</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -87,7 +141,21 @@
             <li class="portfolio__item">
               <a href="#" class="portfolio__link link">
                 <div class="portfolio__wrapper">
-                  <img src="./images/technocrack.jpg" alt="Технокряк" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/technocrack.jpg 1x, ./images/technocrack-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/technocrack-tab.jpg 1x, ./images/technocrack-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/technocrack-mob.jpg 1x, ./images/technocrack-mob-2x.jpg 2x"
+                      media="(min-width: 480px)"
+                    />
+                    <img src="./images/technocrack-mob.jpg" alt="Технокряк" width="450" />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -105,7 +173,21 @@
             <li class="portfolio__item">
               <a href="#" class="portfolio__link link">
                 <div class="portfolio__wrapper">
-                  <img src="./images/poster.jpg" alt="Постер" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/poster.jpg 1x, ./images/poster-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/poster-tab.jpg 1x, ./images/poster-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/poster-mob.jpg 1x, ./images/poster-mob-2x.jpg 2x"
+                      media="(min-width: 480px)"
+                    />
+                    <img src="./images/poster.jpg" alt="Постер" width="450" />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -123,7 +205,21 @@
             <li class="portfolio__item">
               <a href="#" class="portfolio__link link">
                 <div class="portfolio__wrapper">
-                  <img src="./images/restaurant.jpg" alt="Ресторан" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/restaurant.jpg 1x, ./images/restaurant-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/restaurant-tab.jpg 1x, ./images/restaurant-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/restaurant-mob.jpg 1x, ./images/restaurant-mob-2x.jpg 2x"
+                      media="(min-width: 480px)"
+                    />
+                    <img src="./images/restaurant.jpg" alt="Ресторан" width="450" />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -141,7 +237,21 @@
             <li class="portfolio__item">
               <a href="#" class="portfolio__link link">
                 <div class="portfolio__wrapper">
-                  <img src="./images/prime.jpg" alt="Проєкт Prime" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/prime.jpg 1x, ./images/prime-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/prime-tab.jpg 1x, ./images/prime-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/prime-mob.jpg 1x, ./images/prime-mob-2x.jpg 2x"
+                      media="(min-width: 480px)"
+                    />
+                    <img src="./images/prime.jpg" alt="Проєкт Prime" width="450" />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -159,7 +269,21 @@
             <li class="portfolio__item">
               <a href="#" class="portfolio__link link">
                 <div class="portfolio__wrapper">
-                  <img src="./images/boxes.jpg" alt="Проєкт Boxes" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/boxes.jpg 1x, ./images/boxes-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/boxes-tab.jpg 1x, ./images/boxes-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/boxes-mob.jpg 1x, ./images/boxes-mob-2x.jpg 2x"
+                      media="(min-width: 480px)"
+                    />
+                    <img src="./images/boxes.jpg" alt="Проєкт Boxes" width="450" />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -177,7 +301,21 @@
             <li class="portfolio__item">
               <a href="#" class="portfolio__link link">
                 <div class="portfolio__wrapper">
-                  <img src="./images/borders.jpg" alt="Веб-сайт" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/borders.jpg 1x, ./images/borders-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/borders-tab.jpg 1x, ./images/borders-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/borders-mob.jpg 1x, ./images/borders-mob-2x.jpg 2x"
+                      media="(min-width: 480px)"
+                    />
+                    <img src="./images/borders.jpg" alt="Веб-сайт" width="450" />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -195,7 +333,21 @@
             <li class="portfolio__item">
               <a href="#" class="portfolio__link link">
                 <div class="portfolio__wrapper">
-                  <img src="./images/edition.jpg" alt="Видання" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/edition.jpg 1x, ./images/edition-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/edition-tab.jpg 1x, ./images/edition-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/edition-mob.jpg 1x, ./images/edition-mob-2x.jpg 2x"
+                      media="(min-width: 480px)"
+                    />
+                    <img src="./images/edition.jpg" alt="Видання" width="450" />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -213,7 +365,21 @@
             <li class="portfolio__item">
               <a href="#" class="portfolio__link link">
                 <div class="portfolio__wrapper">
-                  <img src="./images/lab.jpg" alt="Проєкт LAB" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/lab.jpg 1x, ./images/lab-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/lab-tab.jpg 1x, ./images/lab-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/lab-mob.jpg 1x, ./images/lab-mob-2x.jpg 2x"
+                      media="(min-width: 480px)"
+                    />
+                    <img src="./images/lab.jpg" alt="Проєкт LAB" width="450" />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -231,7 +397,21 @@
             <li class="portfolio__item">
               <a href="#" class="portfolio__link link">
                 <div class="portfolio__wrapper">
-                  <img src="./images/business.jpg" alt="Growing Business" width="370" />
+                  <picture>
+                    <source
+                      srcset="./images/business.jpg 1x, ./images/business-2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/business-tab.jpg 1x, ./images/business-tab-2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/business-mob.jpg 1x, ./images/business-mob-2x.jpg 2x"
+                      media="(min-width: 480px)"
+                    />
+                    <img src="./images/business.jpg" alt="Growing Business" width="450" />
+                  </picture>
                   <div class="portfolio__overlay">
                     <p class="portfolio__description">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -252,9 +432,9 @@
     </main>
 
     <!-- footer -->
-    <footer class="footer footer">
+    <footer class="footer">
       <div class="footer__container container">
-        <div class="requisites">
+        <div class="requisites footer__requisites">
           <a href="/" class="logo">Web<span class="logo__text--inverse">Studio</span></a>
           <address class="requisites__address">
             <ul class="requisites__list list">
@@ -275,7 +455,7 @@
           </address>
         </div>
 
-        <div class="network network--indent-left">
+        <div class="network footer__network">
           <p class="network__title">приєднуйтесь</p>
           <ul class="network__list list">
             <li class="network__item">
@@ -309,7 +489,7 @@
           </ul>
         </div>
 
-        <div class="mailing mailing--indent-left">
+        <div class="mailing footer__mailing">
           <p class="mailing__title">Підпишіться на розсилку</p>
           <form class="mailing__form">
             <label class="mailing__label">
@@ -325,5 +505,7 @@
         </div>
       </div>
     </footer>
+
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

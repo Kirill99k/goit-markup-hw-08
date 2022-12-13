@@ -1,8 +1,12 @@
 .logo {
   color: var(--accent-color);
   font-family: var(--logo-font-family), sans-serif;
-  @include font(700, 26px, 1.2);
+  @include font(700, 24px, 1.16);
   text-decoration: none;
+
+  @include desktop {
+    @include font(700, 26px, 1.2);
+  }
 }
 
 .logo__text {
