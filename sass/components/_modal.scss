@@ -170,7 +170,7 @@
   @include mobile {
     @include font(null, 12px, 1.6);
   }
-  @include mobile {
+  @include desktop {
     @include font(null, 14px, 1.7);
   }
 }
@@ -181,7 +181,7 @@
   @include mobile {
     @include font(null, 12px, 1.6);
   }
-  @include mobile {
+  @include desktop {
     @include font(null, 14px, 1.7);
   }
 }

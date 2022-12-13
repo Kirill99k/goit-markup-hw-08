@@ -1210,7 +1210,7 @@ img {
     letter-spacing: 0.03em;
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 1200px) {
   .agreement__text {
     font-size: 14px;
     line-height: 1.7;
@@ -1231,7 +1231,7 @@ img {
     letter-spacing: 0.03em;
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 1200px) {
   .agreement__link {
     font-size: 14px;
     line-height: 1.7;
