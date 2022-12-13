@@ -6,26 +6,26 @@
   margin-right: auto;
   margin-left: auto;
 
-  background-image: var(--gradient), url(../../images/hero-mob.jpg);
+  background-image: var(--gradient), url(../images/hero-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   @include retina {
-    background-image: var(--gradient), url(../../images/hero-mob-2x.jpg);
+    background-image: var(--gradient), url(../images/hero-mob-2x.jpg);
   }
 
   @include mobile {
-    background-image: var(--gradient), url(../../images/hero-tablet.jpg);
+    background-image: var(--gradient), url(../images/hero-tablet.jpg);
     @include retina {
-      background-image: var(--gradient), url(../../images/hero-tablet-2x.jpg);
+      background-image: var(--gradient), url(../images/hero-tablet-2x.jpg);
     }
   }
 
   @include tablet {
-    background-image: var(--gradient), url(../../images/hero.jpg);
+    background-image: var(--gradient), url(../images/hero.jpg);
     @include retina {
-      background-image: var(--gradient), url(../../images/hero-2x.jpg);
+      background-image: var(--gradient), url(../images/hero-2x.jpg);
     }
   }
 
