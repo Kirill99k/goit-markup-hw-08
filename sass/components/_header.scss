@@ -23,11 +23,6 @@
   }
 }
 
-.header__container,
-.header__nav {
-  // @include alignment;
-}
-
 .header__site-nav {
   display: none;
   gap: 50px;
@@ -176,7 +171,6 @@
   position: fixed;
   width: 100vw;
   height: 100vh;
-  max-width: 480px;
   top: 0;
   left: 50%;
   translate: -50%;
@@ -206,6 +200,10 @@
 .mob-nav__link {
   color: var(--title-color);
   @include font(500, 40px, 1.18, 0.02em);
+}
+
+.mob-nav__link--current {
+  color: var(--accent-color);
 }
 
 /* ---------------- mob-contact ---------------- */
