@@ -1,12 +1,12 @@
-.feature {
-  // display: flex;
-}
-
 .feature__list {
+  display: flex;
+  gap: 30px;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
   @include tablet {
-    display: flex;
     flex-wrap: wrap;
-    gap: 30px;
   }
 }
 
@@ -20,16 +20,10 @@
   }
 }
 
-.feature__item:not(:last-child) {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 30px;
-  }
-}
-
 .feature__icon {
   @include alignment;
-  margin-bottom: 30px;
   justify-content: center;
+  margin-bottom: 30px;
 
   height: 120px;
   border-radius: 4px;

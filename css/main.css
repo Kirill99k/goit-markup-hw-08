@@ -191,7 +191,6 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .logo {
-    font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
     letter-spacing: 0.03em;
@@ -235,14 +234,9 @@ img {
 }
 
 .header__site-nav {
-  display: none;
+  display: flex;
   gap: 50px;
   margin-left: 88px;
-}
-@media screen and (min-width: 768px) {
-  .header__site-nav {
-    display: flex;
-  }
 }
 @media screen and (min-width: 1200px) {
   .header__site-nav {
@@ -271,10 +265,6 @@ img {
 /* ---------------- site-nav ---------------- */
 .site-nav__link {
   color: var(--title-color);
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1.18;
-  letter-spacing: 0.02em;
   text-decoration: none;
   transition: color 250ms var(--timing-function);
 }
@@ -290,34 +280,21 @@ img {
     letter-spacing: 0.02em;
   }
 }
-@media screen and (min-width: 1200px) {
-  .site-nav__link {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-  }
-}
-.site-nav__link:hover, .site-nav__link:focus {
+.site-nav__link:hover, .site-nav__link:focus, .site-nav__link--current {
   color: var(--accent-color);
 }
-
-@media screen and (min-width: 768px) {
-  .site-nav__link--current::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: var(--accent-color);
-    border-radius: 2px;
-  }
-  .site-nav__link--current {
-    color: var(--accent-color);
-  }
+.site-nav__link--current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
+
 /* ---------------- list-contact ---------------- */
 @media screen and (max-width: 1199px) {
   .list-contact__item:first-child {
@@ -325,17 +302,21 @@ img {
   }
 }
 
-@media screen and (min-width: 768px) {
+.list-contact__link {
+  display: flex;
+  align-items: center;
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: color 250ms var(--timing-function);
+}
+@media screen and (min-width: 1200px) {
   .list-contact__link {
-    display: flex;
-    align-items: center;
-    color: var(--primary-text-color);
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    transition: color 250ms var(--timing-function);
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 .list-contact__link:hover, .list-contact__link:focus {
@@ -353,7 +334,7 @@ img {
   }
 }
 
-/* ---------------- menu-open ---------------- */
+/* ---------------- menu-open, menu-close ---------------- */
 .menu-close {
   position: absolute;
   top: 10px;
@@ -453,15 +434,14 @@ img {
 
 .mob-contact__link--stylization {
   color: var(--accent-color);
-  font-weight: 500;
   font-size: 34px;
   line-height: 1.17;
-  letter-spacing: 0.02em;
 }
 
 /* ---------------- mob-links ---------------- */
 .mob-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -544,6 +524,12 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
 
 .hero__button {
   padding: 10px 24px;
@@ -557,11 +543,18 @@ img {
 }
 
 /* ---------------- feature ---------------- */
+.feature__list {
+  display: flex;
+  gap: 30px;
+}
+@media screen and (max-width: 767px) {
+  .feature__list {
+    flex-direction: column;
+  }
+}
 @media screen and (min-width: 768px) {
   .feature__list {
-    display: flex;
     flex-wrap: wrap;
-    gap: 30px;
   }
 }
 
@@ -579,17 +572,11 @@ img {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .feature__item:not(:last-child) {
-    margin-bottom: 30px;
-  }
-}
-
 .feature__icon {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
   justify-content: center;
+  margin-bottom: 30px;
   height: 120px;
   border-radius: 4px;
   background: var(--section-background-teams-color);
@@ -659,11 +646,18 @@ img {
   margin-bottom: 30px;
 }
 
+.team__list {
+  display: flex;
+  gap: 30px;
+}
+@media screen and (max-width: 767px) {
+  .team__list {
+    flex-direction: column;
+  }
+}
 @media screen and (min-width: 768px) {
   .team__list {
-    display: flex;
     flex-wrap: wrap;
-    gap: 30px;
   }
 }
 
@@ -681,12 +675,6 @@ img {
 @media screen and (min-width: 1200px) {
   .team__item {
     width: calc((100% - 90px) / 4);
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .team__item:not(:last-child) {
-    margin-bottom: 30px;
   }
 }
 
@@ -763,8 +751,8 @@ img {
 }
 
 .client__item {
-  width: calc((100% - 30px) / 2);
   height: 92px;
+  width: calc((100% - 30px) / 2);
 }
 @media screen and (min-width: 768px) {
   .client__item {
@@ -1044,7 +1032,6 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 95px 15px;
   background-color: var(--modal-background-rgba);
   overflow-y: scroll;
   opacity: 1;
@@ -1061,7 +1048,7 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
   width: calc(100% - 30px);
   padding: 40px;
   background-color: var(--white-color);
@@ -1185,6 +1172,7 @@ img {
 .agreement {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 30px;
 }
@@ -1211,7 +1199,6 @@ img {
 @media screen and (min-width: 480px) {
   .agreement__text {
     font-size: 12px;
-    line-height: 1.6;
     letter-spacing: 0.03em;
   }
 }
@@ -1232,7 +1219,6 @@ img {
 @media screen and (min-width: 480px) {
   .agreement__link {
     font-size: 12px;
-    line-height: 1.6;
     letter-spacing: 0.03em;
   }
 }
@@ -1266,6 +1252,7 @@ img {
 .filter__list {
   display: flex;
   margin-bottom: 40px;
+  gap: 15px 8px;
 }
 @media screen and (max-width: 767px) {
   .filter__list {
@@ -1283,16 +1270,6 @@ img {
   .filter__list {
     margin-bottom: 50px;
   }
-}
-
-@media screen and (max-width: 767px) {
-  .filter__item:nth-child(-n+3) {
-    margin-bottom: 15px;
-  }
-}
-
-.filter__item:not(:last-child) {
-  margin-right: 8px;
 }
 
 .filter__button {

@@ -5,7 +5,7 @@
   text-decoration: none;
 
   @include desktop {
-    @include font(700, 26px, 1.2);
+    @include font(null, 26px, 1.2);
   }
 }
 

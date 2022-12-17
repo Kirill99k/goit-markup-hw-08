@@ -1,14 +1,20 @@
 /* ---------------- filter ---------------- */
 .filter__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 40px;
+  gap: 15px 8px;
 
   @media screen and (max-width: 767px) {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding-right: 100px;
   }
 
   @include tablet {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin-bottom: 30px;
   }
@@ -16,16 +22,6 @@
   @include desktop {
     margin-bottom: 50px;
   }
-}
-
-.filter__item:nth-child(-n + 3) {
-  @media screen and (max-width: 767px) {
-    margin-bottom: 15px;
-  }
-}
-
-.filter__item:not(:last-child) {
-  margin-right: 8px;
 }
 
 .filter__button {
