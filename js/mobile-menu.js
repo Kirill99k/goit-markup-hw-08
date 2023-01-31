@@ -21,3 +21,9 @@
     refs.body.classList.remove('no-scroll');
   }
 })();
+
+const message = logins.includes(loginToFind)
+  ? `Пользователь ${loginToFind} найден.`
+  : `Пользователь ${loginToFind} не найден.`;
+
+console.log(message);
